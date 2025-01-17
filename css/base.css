@@ -7,6 +7,15 @@ html, body {
     height: 100%; /* Zorg ervoor dat de hoogte 100% is voor de hele pagina */
     font-family: 'Montserrat', sans-serif; /* Gebruik Montserrat als het standaard lettertype */
 }
+
+img {
+    display: block; /* Zorgt ervoor dat de afbeelding als blok element wordt weergegeven */
+    margin-left: auto; /* Hiermee wordt de afbeelding naar links uitgelijnd */
+    margin-right: auto; /* Hiermee wordt de afbeelding naar rechts uitgelijnd */
+    max-width: 80%; /* Zorgt ervoor dat de afbeelding maximaal 80% van de containerbreedte is */
+    height: auto; /* Behoud de verhoudingen van de afbeelding */
+    margin-bottom: 20px; /* Voeg ruimte onder de afbeelding toe om het visueel aantrekkelijker te maken */
+}
 /* Actieve navigatieknop */
 .header-center .navbar a.active {
     background-color: #f0f0f0; /* Lichte grijze kleur voor de actieve knop */

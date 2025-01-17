@@ -4,6 +4,7 @@
 html, body {
     margin: 0;
     padding: 0;
+    background-color: #272727;
     height: 100%; /* Zorg ervoor dat de hoogte 100% is voor de hele pagina */
     font-family: 'Montserrat', sans-serif; /* Gebruik Montserrat als het standaard lettertype */
 }
@@ -44,6 +45,10 @@ body {
     display: flex;
     flex-direction: column;
     height: 100%; /* Zorg ervoor dat de body het volledige scherm gebruikt */
+}
+
+h2 {
+    color: white;
 }
 
 /* Header container */

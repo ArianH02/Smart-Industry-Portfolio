@@ -46,10 +46,18 @@
                         <select id="city-select" onchange="fetchWeather()">
                             <option value="Nijmegen,NL">Nijmegen, Netherlands</option>
                             <option value="Amsterdam,NL">Amsterdam, Netherlands</option>
-                            <option value="London,GB">London, United Kingdom</option>
-                            <option value="New York,US">New York, United States</option>
                             <option value="Paris,FR">Paris, France</option>
                             <option value="Tokyo,JP">Tokyo, Japan</option>
+                            <option value="Berlin,DE">Berlin, Germany</option>
+                            <option value="New York,US">New York, United States</option>
+                            <option value="Sydney,AU">Sydney, Australia</option>
+                            <option value="São Paulo,BR">São Paulo, Brazil</option>
+                            <option value="Cape Town,ZA">Cape Town, South Africa</option>
+                            <option value="Shanghai,CN">Shanghai, China</option>
+                            <option value="Mexico City,MX">Mexico City, Mexico</option>
+                            <option value="London,GB">London, United Kingdom</option>
+                            <option value="Moscow,RU">Moscow, Russia</option>
+
                         </select>
                     </div>
                     <h2 id="city-name"></h2>
@@ -72,14 +80,14 @@
 
                 <!-- NASA Picture of the Day Section -->
                 <section class="assignment">
-                    <h2>NASA  Picture of the day</h2>
+                    <h2>NASA  Picture of the Day</h2>
                     <div>
-                        <label for="nasa-date">Selecteer een datum:</label>
+                        <h3>Selecteer een datum</h3>
                         <input type="date" id="nasa-date" max="2026-12-31" onchange="fetchNasaPhoto()">
                     </div>
                     <div id="nasa-container">
                         <img id="nasa-img" src="" alt="NASA Foto van de dag">
-                        <p id="nasa-title"></p>
+                        <h3 id="nasa-title"></h3>
                         <p id="nasa-explanation"></p>
                     </div>
                 </section>
@@ -130,8 +138,8 @@
 
                     if (response.ok) {
                         document.getElementById('nasa-img').src = data.url;
-                        document.getElementById('nasa-title').textContent = `Titel: ${data.title}`;
-                        document.getElementById('nasa-explanation').textContent = `Uitleg: ${data.explanation}`;
+                        document.getElementById('nasa-title').textContent = `${data.title}`;
+                        document.getElementById('nasa-explanation').textContent = `${data.explanation}`;
                     } else {
                         console.error(`Error: ${data.message}`);
                     }

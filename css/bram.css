@@ -5,7 +5,6 @@ html, body {
     height: 100%;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 500;
-    background-color: #0a0a0a; /* Dark background */
     color: #e0e0e0; /* Light text */
 }
 
@@ -123,11 +122,11 @@ header h1 {
     gap: 1.5rem;
     padding: 1.5rem;
     max-width: 750px;
-    margin: auto;
+    margin: auto;   
 }
 
 .assignment {
-    background-color: #1e1e1e;
+    background-color: #1f1f1f;
     border-radius: 6px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     padding: 1rem;
@@ -147,6 +146,7 @@ select, input[type="date"] {
     border: 1px solid #4caf50;
     border-radius: 4px;
     width: 100%;
+    max-width: 250px;
     background-color: #2c2c2c;
     color: #e0e0e0;
 }
@@ -189,10 +189,11 @@ header {
     background-color: #121212; /* Slightly lighter for contrast */
     color: #ffffff; /* Light text for readability */
     padding: 1rem;
-    padding-top: 0rem;
+    padding-top: 0.2rem;
     min-height: 200px;
     border-radius: 8px; /* Smooth corners */
     text-align: center;
+    vertical-align: middle;
     font-family: 'Montserrat', sans-serif; /* Modern font */
 }
 
@@ -200,7 +201,8 @@ header {
 .weather-block h3 {
     font-size: 1rem;
     margin-bottom: 0.5rem;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
+    vertical-align: middle;
     color: #aaaaaa; /* Subtle highlight for headings */
 }
 
@@ -209,5 +211,18 @@ header {
     font-size: 2rem;
     font-weight: bold;
     margin: 0;
+    margin-top: 3.5rem;
     color: #ffffff; /* High contrast for important data */
 }
+
+.images-row {
+    display: flex;          /* Plaatst de afbeeldingen naast elkaar */
+    gap: 20px;              /* Ruimte tussen de afbeeldingen */
+    margin-top: 20px;       /* Eventuele extra ruimte boven de images */
+  }
+  
+  .images-row img {
+    width: 50%;             /* Past het formaat van de afbeeldingen aan */
+    object-fit: cover;      /* Zorgt ervoor dat de afbeelding mooi gevuld wordt */
+    max-height: 250px;
+  }

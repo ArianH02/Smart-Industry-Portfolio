@@ -5,7 +5,7 @@ html, body {
     padding: 0;
     height: 100%;
     font-family: 'Montserrat', sans-serif;
-    background-color: #0a0a0a; /* Dark background */
+    background-color: #1c1c1c; /* Dark background */
     color: #e0e0e0; /* Light text for contrast */
 }
 
@@ -113,7 +113,7 @@ header {
 .learning-objectives {
     max-width: 60%;
     margin: auto;
-    padding: 16px;
+    padding: 25px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -135,13 +135,15 @@ header {
 
 /* Weekly updates section */
 .week-filter {
+    align-items: center;
     text-align: center;
     margin: 16px 0;
-    width: 250 px;
+    max-width: 60%;
 }
 
 .week-filter select {
     padding: 8px;
+    max-width: 250px;
     font-size: 0.9rem;
     border: 2px solid #4f4f4f;
     background-color: #1f1f1f;
@@ -163,7 +165,7 @@ header {
 }
 
 .week-header {
-    background-color: #4f4f4f;
+    background-color: #4caf50;
     padding: 8px 16px;
     color: #121212;
     font-size: 1.2rem;

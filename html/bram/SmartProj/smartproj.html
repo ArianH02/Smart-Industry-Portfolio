@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Project</title>
+    <link rel="stylesheet" href="../../../css/basebram.css">
+    <link rel="stylesheet" href="../../../css/bram.css">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Header met profielfoto en navigatieknoppen -->
+        <header>
+            <div class="header-left">
+                <div class="header-center">
+                    <nav class="navbar">
+                        <ul>
+                            <li><a href="../../index.html">🏠</i></a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <img src="../../../images/bram.png" alt="bram" class="profile-pic">
+                <h1>Portfolio Bram de Weger</h1>
+            </div>
+            <div class="header-center">
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="../SmartMe/smartme.html">Smart Me</a></li>
+                        <li><a href="../SmartTech/smarttech.html">Smart Technology</a></li>
+                        <li><a href="../SmartCon/smartcon.html">Smart Connection</a></li>
+                        <li><a href="../SmartBus/smartbus.html">Smart Business</a></li>
+                        <li><a href="../SmartProj/smartproj.html" class="active">IoT video</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+        </header>
+
+        <main>
+            <section class="learning-objectives">
+                <video id="myVideo" width="auto" height="auto" controls>
+                <source src="../../../images/IoT_bram.mov" type="video/mp4">
+                <!-- You can include additional <source> tags for different file formats -->
+                
+                <!-- Fallback text if the browser doesn't support the video tag -->
+                Your browser does not support the video tag.
+            </video>
+        </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Minor Smart Industry</p>
+        </footer>
+        <script>
+            window.addEventListener('DOMContentLoaded', () => {
+              const video = document.getElementById('myVideo');
+              video.volume = 0.5; // Sets the volume to 50%
+            });
+          </script>
+       
+    </div>
+</body>
+</html>

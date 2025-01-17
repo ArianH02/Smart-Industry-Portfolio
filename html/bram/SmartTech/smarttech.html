@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Technology</title>
+    <link rel="stylesheet" href="../../../css/basebram.css">
+    <link rel="stylesheet" href="../../../css/bram.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="header-left">
+                <div class="header-center">
+                    <nav class="navbar">
+                        <ul>
+                            <li><a href="../../index.html">🏠</i></a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <img src="../../../images/bram.png" alt="bram" class="profile-pic">
+                <h1>Portfolio Bram de Weger</h1>
+            </div>
+            <div class="header-center">
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="../SmartMe/smartme.html">Smart Me</a></li>
+                        <li><a href="../SmartTech/smarttech.html" class="active">Smart Technology</a></li>
+                        <li><a href="../SmartCon/smartcon.html">Smart Connection</a></li>
+                        <li><a href="../SmartBus/smartbus.html">Smart Business</a></li>
+                        <li><a href="../SmartProj/smartproj.html">Smart Project</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        
+        
+        <section class="learning-objectives">
+
+            <h1>Introductie lessen</h1>
+            <p>
+                Tijdens de eerste weken van de minor Smart Industry lag de focus op het verkennen van IoT. We kregen een ESP32 en werkten met een handleiding van RobotExchange.io. Omdat ik al ervaring had met vergelijkbare componenten vanuit mijn studie, was dit een relatief eenvoudige start. Toch was het belangrijk om alle onderdelen en de ESP32 te testen om er zeker van te zijn dat ze goed functioneerden.
+            </p>
+        
+            <h2>LDR-opdrachten</h2>
+            <p>
+                Bij de eerste opdracht ging het erom een LDR (Light Dependent Resistor) werkend te krijgen. De waarde van de LDR werd uitgelezen door de ESP32 en vervolgens doorgestuurd naar mijn computer. In de video is te zien hoe de LDR-waarde op het scherm verschijnt. Hoewel deze opdracht niet erg complex was, waardeerde ik de veelzijdigheid van de ESP32. Het apparaat is energiezuinig, heeft een snellere kloksnelheid dan vergelijkbare microcontrollers en beschikt over ingebouwde WiFi en Bluetooth.
+            </p>
+            <p>
+                Bij de tweede test paste ik de code aan zodat de ingebouwde LED ging branden wanneer ik mijn vinger boven de LDR hield. Het programma registreerde een referentiewaarde en schakelde de LED in zodra de gemeten waarde aanzienlijk lager werd dan de referentiewaarde.
+            </p>
+        
+            <h2>Verdiepende lessen</h2>
+            <p>
+                Nadat de hardware was getest, gingen we verder met het softwaregedeelte. We maakten gebruik van de Blynk API en doken dieper in het programmeren van functies. Omdat ik al bekend was met dit soort programmeertaken, heb ik veel medestudenten kunnen helpen bij het schrijven van code en het begrijpen van de werking van de verschillende systemen.
+            </p>
+        
+            <h2>Plant water systeem</h2>
+            <p>
+                Voor de eindopdracht bouwden we een automatisch plant wateringssysteem. Dit project bracht verschillende disciplines samen: het programmeren van microcontrollers, het ontwerpen van PCB’s, solderen, en het maken van 3D-modellen. Het systeem kan zowel de bodemvochtigheid als de lichtintensiteit meten. Afhankelijk van de omstandigheden schakelt het systeem een waterpomp of verlichting in via een KlikAanKlikUit-schakelaar. Alle componenten werden samengebracht in een zelfontworpen 3D-geprinte behuizing.
+            </p>
+        
+            <h2>Additive Manufacturing</h2>
+            <p>
+                Tijdens de lessen Additive Manufacturing leerden we over de impact van 3D-printen. Door middel van dit proces kunnen complexe vormen worden gecreëerd die met traditionele methoden moeilijk of niet haalbaar zijn. Dit maakt het een flexibele en vaak kostenbesparende manier van produceren. Een specifiek voordeel is de mogelijkheid om snel prototypes te itereren zonder dure mallen te hoeven maken.
+            </p>
+        
+        </section>
+
+        <main>
+
+            <section class="week-filter">
+                <label for="week-select">Filteren op week:</label>
+                <select id="week-select" onchange="filterWeeks()">
+                    <option value="all">Alle weken</option>
+                    <option value="week1">Week 1</option>
+                    <option value="week2">Week 2</option>
+                    <option value="week3">Week 3</option>
+                    <option value="week4">Week 4</option>
+                    <option value="week5">Week 5</option>
+                </select>
+            </section>
+
+            <section class="weekly-updates">
+                <h2>Wekelijkse updates - Smart Technology</h2>
+
+                <div class="week-box" id="week1">
+                    <div class="week-header">Week 1</div>
+                    <div class="week-content">
+                        <p></p>
+                    </div>
+                </div>
+
+             
+
+                
+            
+
+
+               
+
+                <!-- Add more weeks as needed -->
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Minor Smart Industry</p>
+    </footer>
+
+    <script>
+        function filterWeeks() {
+            const selectedWeek = document.getElementById('week-select').value;
+            const allWeeks = document.querySelectorAll('.week-box');
+
+            allWeeks.forEach(week => {
+                if (selectedWeek === 'all') {
+                    week.style.display = 'block';
+                } else if (week.id === selectedWeek) {
+                    week.style.display = 'block';
+                    week.scrollIntoView();
+                } else {
+                    week.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

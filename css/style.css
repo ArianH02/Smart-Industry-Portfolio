@@ -1,10 +1,12 @@
+/* Common styles for the entire website */
+
+/* Ensure the header takes up the full width */
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
     overflow-x: hidden; /* Prevent horizontal scroll */
     font-family: Montserrat;
-    
 }
 
 body {
@@ -37,8 +39,7 @@ main {
     min-height: calc(100vh - 160px); /* Houdt rekening met de hoogte van header en footer */
 }
 
-
-
+/* Styling voor de header */
 h1, h2 {
     color: #ffffff;
 }
@@ -51,19 +52,11 @@ h1, h2 {
     display: inline-block; /* Zorg ervoor dat de achtergrond zich alleen rond de tekst bevindt */
 }
 
-
 .welcome-container {
     display: flex; /* Zet de container op flex */
     justify-content: center; /* Centreert de tekst horizontaal */
     align-items: center; /* Centreert de tekst verticaal (indien nodig) */
     margin-top: 50px; /* Ruimte onder de container */
-}
-
-
-.welcome-section h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #333;
 }
 
 /* Teamsectie naar onder verplaatsen */
@@ -98,11 +91,10 @@ h1, h2 {
     color: #ffffff;
 }
 
-
-
 /* Groene knop toevoegen onder teamsectie */
 .agriware-button {
     text-align: center;
+    margin-bottom: 20px;  /* Adds space between the buttons */
 }
 
 .agriware-button .btn-green {
@@ -113,7 +105,8 @@ h1, h2 {
     font-size: 1.2rem;
     border-radius: 8px;
     font-weight: 600; /* Maak de tekst extra vet (bold) */
-    
+    display: inline-block; /* Ensures that the buttons stay aligned */
+    margin: 10px 0; /* Ensures space between the buttons */
 }
 
 .agriware-button .btn-green:hover {
@@ -154,7 +147,6 @@ footer {
     bottom: 0;
     font-family: Montserrat, sans-serif; /* Montserrat font toegevoegd */
 }
-
 
 /* Aanpassen van media queries indien nodig */
 @media (max-width: 768px) {
@@ -218,8 +210,3 @@ footer {
 .back-button-section .btn-green:hover {
     background-color: #45a049; /* Kleurverandering bij hover */
 }
-
-
-
-
-
